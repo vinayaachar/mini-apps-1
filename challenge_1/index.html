@@ -1,2 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Tic Tak Toe Game</title>
+    <style>
+      table, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 50px;
+      }
+      h1 {text-align: center;};
+    </style>
+    <h1>Tic Tak Toe Game</h1>
+  </head>
+
+  <body>
+    <table style="float: center">
+      <tr>
+        <td id ="1" onclick="myFunction()"></td>
+        <td id ="2" onclick="myFunction()"></td>
+        <td id ="3" onclick="myFunction()"></td>
+      </tr>
+      <tr>
+        <td id ="4" onclick="myFunction()"></td>
+        <td id ="5" onclick="myFunction()"></td>
+        <td id ="6" onclick="myFunction()"></td>
+      </tr>
+      <tr>
+        <td id ="7" onclick="myFunction()"></td>
+        <td id ="8" onclick="myFunction()"></td>
+        <td id ="9" onclick="myFunction()"></td>
+      </tr>
+    </table>
+    <script >
+      function myFunction() {
+        var choices = ['X', 'O']
+        var choice = choices[Math.floor(Math.random() * choices.length - 1)];
+        var id =event.target.id;
+        document.getElementById(id).innerHTML = choice;
+      }
+    </script>
+  </body>
+</html>
 
 
