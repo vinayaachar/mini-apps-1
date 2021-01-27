@@ -12,9 +12,19 @@
       td {
         padding: 50px;
       }
+      .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
       h1 {
         text-align: center;
-
         };
     </style>
     <h1>Tic Tak Toe Game</h1>
@@ -22,7 +32,7 @@
 
   <body>
     <div id = "winner"></div>
-    <table style="float: center">
+    <table id = "myTable">
       <tr>
         <td id ="0" onclick="myFunction()"></td>
         <td id ="1" onclick="myFunction()"></td>
@@ -39,6 +49,7 @@
         <td id ="8" onclick="myFunction()"></td>
       </tr>
     </table>
+    <button class = "button" onclick="reload()">Reload Game</button>
     <script src="app.js"></script>
   </body>
 </html>

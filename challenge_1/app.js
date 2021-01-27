@@ -1,6 +1,8 @@
 var choice = 'O';
 var count = 0;
 var winner = 'tie';
+var table = document.getElementById('myTable');
+var content = table.innerHTML;
 
 const array = [
   [0, 1, 2],
@@ -38,10 +40,15 @@ function declareWinner() {
     count++;
     const [a, b, c] = array[i];
     if (a === b && a === c) {
+      count++;
       div.innerHTML = 'Winner is Player:' + a;
     }
   }
   if (count === 72) {
     div.innerHTML = 'Game is a tie'
   }
+}
+
+function reload() {
+  table.innerHTML = content;
 }
