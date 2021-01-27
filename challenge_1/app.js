@@ -51,4 +51,6 @@ function declareWinner() {
 
 function reload() {
   table.innerHTML = content;
+  var result = document.getElementById('winner');
+  result.innerHTML = '';
 }
