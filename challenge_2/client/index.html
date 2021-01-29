@@ -4,12 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title>CSV Report Generator</title>
+    <style>
+      .submissionfield { width: 500px; height: 90px; border: 1px solid #999999; padding: 5px; }
+    </style>
   </head>
 
   <body>
     <form action = "/" method="post">
       <label for ="json">Enter JSON</label><br>
-      <input type="text" id="json" name ="json"><br>
+      <input class ="submissionfield" type="text" id="json" name="json"><br>
       <button type="submit">Submit</button>
     </form>
   </body>
