@@ -5,15 +5,19 @@
     <meta charset="utf-8">
     <title>CSV Report Generator</title>
     <style>
-      .submissionfield { width: 500px; height: 90px; border: 1px solid #999999; padding: 5px; }
     </style>
   </head>
 
   <body>
-    <form action = "/" method="post">
-      <label for ="json">Enter JSON</label><br>
-      <input class ="submissionfield" type="text" id="json" name="json"><br>
-      <button type="submit">Submit</button>
+    <div></div>
+    <form action = "/" method="post" enctype="multipart/form-data">
+      <div class="form">
+        <label for ="json">Enter JSON</label><br>
+        <input class ="submissionfield" type="file" id="json" name="json"><br>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
     </form>
   </body>
 </html>
