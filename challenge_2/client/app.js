@@ -1,30 +1,24 @@
-$(.button).on('click', function () {
-  const serverUrl = 'http://127.0.0.1:8080/'
+const fileUplaod = (file) => {
+  var formData = new FormData();
+  formData.append('file', file);
   $.ajax({
-    url: server.js,
     type: 'POST',
-
-    data: new FormData($('form')[0]),
+    data: formData,
+    url: 'http://localhost:8080/' ,
     cache: false,
     contentType: false,
     processData: false,
-
-    xhr: function () {
-      var myXhr = $.ajaxSettings.xhr();
-      if (myXhr.upload) {
-        // For handling the progress of the upload
-        myXhr.upload.addEventListener('progress', function (e) {
-          if (e.lengthComputable) {
-            $('progress').attr({
-              value: e.loaded,
-              max: e.total,
-            });
-          }
-        }, false);
-      }
-      return myXhr;
+    success: () => {
+      console.log('Succesfully Uploaded File')
     }
+  });
+};
 
-  })
-})
+$('file').on('submit', function(e) {
+  e.preventDefault();
+
+  var form = $('form .file')[0];
+  var file = form.files[0];
+  fileUplaod(file);
+});
 
